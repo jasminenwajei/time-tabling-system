@@ -1,0 +1,3 @@
+/Users/jasmine/CLionProjects/NTUTimetablingSystem/cmake-build-debug/CMakeFiles/NTUTimetablingSystem.dir
+/Users/jasmine/CLionProjects/NTUTimetablingSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jasmine/CLionProjects/NTUTimetablingSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
