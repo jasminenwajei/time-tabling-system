@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 21/04/2025.
-//
+
 
 #ifndef ADMIN_H
 #define ADMIN_H
@@ -10,7 +8,6 @@
 #include <string>
 #include "../include/Admin.h"
 #include "../include/GlobalVariables.h"
-// ... rest of your includes ...
 
 // Forward declarations
 class Module;

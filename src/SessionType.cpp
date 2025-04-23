@@ -1,6 +1,3 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
 #include "../include/SessionType.h"
 
 SessionType::SessionType(const std::string& id, const std::string& name)

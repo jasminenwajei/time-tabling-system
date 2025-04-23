@@ -1,7 +1,3 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
-
 #include "../include/Room.h"
 #include <sstream>
 

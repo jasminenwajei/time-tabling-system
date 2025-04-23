@@ -1,6 +1,3 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
 
 #include "../include/TimetableEntry.h"
 #include <sstream>
@@ -21,9 +18,6 @@ TimetableEntry::TimetableEntry(const std::string& id, int week, Module* mod, Lec
 }
 
 TimetableEntry::~TimetableEntry() {
-    // Note: In a real application, careful consideration would be needed
-    // about whether to delete the timeSlot pointer or not, depending on
-    // the ownership model. Here we assume TimetableEntry owns its TimeSlot.
     delete timeSlot;
 }
 

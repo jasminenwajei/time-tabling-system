@@ -22,7 +22,7 @@ void initializeSystem(UserManager& userManager);
 void displayMainMenu();
 void displayAdminMenu();
 void displayStudentMenu();
-void handleAdminOperations(Admin* admin, TimetableManager& timetableManager);
+void handleAdminOperations(Admin* admin, TimetableManager& timetableManager, UserManager& userManager);
 void handleStudentOperations(Student* student, TimetableManager& timetableManager);
 
 // Admin menu handlers
@@ -82,7 +82,7 @@ int main() {
                     // Handle user operations based on type
                     Admin* admin = dynamic_cast<Admin*>(user);
                     if (admin) {
-                        handleAdminOperations(admin, timetableManager);
+                        handleAdminOperations(admin, timetableManager, userManager);
                     } else {
                         Student* student = dynamic_cast<Student*>(user);
                         if (student) {
@@ -191,7 +191,7 @@ void displayStudentMenu() {
     std::cout << "4. Logout" << std::endl;
 }
 
-void handleAdminOperations(Admin* admin, TimetableManager& timetableManager) {
+void handleAdminOperations(Admin* admin, TimetableManager& timetableManager, UserManager& userManager) {
     bool adminLoggedIn = true;
 
     while (adminLoggedIn) {
@@ -217,9 +217,8 @@ void handleAdminOperations(Admin* admin, TimetableManager& timetableManager) {
                 handleSessionTypeManagement(admin);
                 break;
             case 4:
-                std::cout << "Student Management not fully implemented in this demo." << std::endl;
-                waitForEnter();
-                break;
+                handleStudentManagement(admin, userManager);
+            break;
             case 5:
                 handleLecturerManagement(admin);
                 break;
@@ -480,7 +479,7 @@ void handleModuleManagement(Admin* admin) {
             }
 
             int index = getInputInt("Enter module number to delete: ", 1, g_modules.size()) - 1;
-
+            Module* module = g_modules[index];
             std::string code = module->getModuleCode();
 
             g_modules.erase(g_modules.begin() + index);

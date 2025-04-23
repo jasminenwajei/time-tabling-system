@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
+
 
 #ifndef SESSION_TYPE_H
 #define SESSION_TYPE_H

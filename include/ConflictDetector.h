@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
+
 
 #ifndef CONFLICT_DETECTOR_H
 #define CONFLICT_DETECTOR_H

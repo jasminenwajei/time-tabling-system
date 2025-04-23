@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
+
 
 #ifndef TIMESLOT_H
 #define TIMESLOT_H

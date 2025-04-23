@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
+
 
 #include "../include/UserManager.h"
 #include <algorithm>

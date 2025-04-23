@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
+
 
 #ifndef TIMETABLE_MANAGER_H
 #define TIMETABLE_MANAGER_H

@@ -1,6 +1,3 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
 
 #include "../include/TimetableManager.h"
 #include <fstream>
@@ -67,9 +64,7 @@ TimetableEntry* TimetableManager::createEntry(int week, Module* mod, Lecturer* l
     // Add to the collection
     timetableEntries.push_back(newEntry);
 
-    // Check for conflicts (this should not find conflicts with the just-added entry
-    // due to the availability checks above, but could find conflicts introduced by
-    // changes elsewhere in the system)
+    // Check for conflicts
     checkForConflicts();
 
     return newEntry;

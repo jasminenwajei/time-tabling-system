@@ -1,6 +1,3 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
 
 #include "../include/Student.h"
 #include "../include/TimetableManager.h"
@@ -9,7 +6,7 @@
 #include <iostream>
 #include <fstream>
 
-// Global collections for simplicity
+// Global collections
 extern std::vector<StudentGroup*> g_studentGroups;
 
 Student::Student(const std::string& id, const std::string& name, const std::string& pwd,

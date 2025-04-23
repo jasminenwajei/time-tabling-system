@@ -1,6 +1,3 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
 
 #ifndef USER_MANAGER_H
 #define USER_MANAGER_H

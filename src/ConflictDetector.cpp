@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
+
 #include "../include/ConflictDetector.h"
 #include <algorithm>
 #include <sstream>

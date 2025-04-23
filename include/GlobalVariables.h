@@ -1,8 +1,4 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
 
-// GlobalVariables.h
 #ifndef GLOBAL_VARIABLES_H
 #define GLOBAL_VARIABLES_H
 

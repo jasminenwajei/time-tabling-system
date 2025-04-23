@@ -1,6 +1,3 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
 
 #ifndef TIMETABLE_ENTRY_H
 #define TIMETABLE_ENTRY_H

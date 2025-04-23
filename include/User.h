@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 21/04/2025.
-//
+
 
 #ifndef USER_H
 #define USER_H

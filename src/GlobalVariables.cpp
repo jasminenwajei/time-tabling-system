@@ -1,6 +1,3 @@
-//
-// Created by jasmine nwajei on 23/04/2025.
-//
 
 // GlobalVariables.cpp
 #include "../include/GlobalVariables.h"
