@@ -55,6 +55,96 @@ build CMakeFiles/NTUTimetablingSystem.dir/main.cpp.o: CXX_COMPILER__NTUTimetabli
   OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
   OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir
 
+build CMakeFiles/NTUTimetablingSystem.dir/src/User.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/User.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/User.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/Admin.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/Admin.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/Admin.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/Student.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/Student.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/Student.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/Module.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/Module.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/Module.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/StudentGroup.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/StudentGroup.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/StudentGroup.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/Lecturer.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/Lecturer.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/Lecturer.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/Room.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/Room.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/Room.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/SessionType.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/SessionType.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/SessionType.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/TimeSlot.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/TimeSlot.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/TimeSlot.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/TimetableEntry.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/TimetableEntry.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/TimetableEntry.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/TimetableManager.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/TimetableManager.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/TimetableManager.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/ConflictDetector.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/ConflictDetector.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/ConflictDetector.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/UserManager.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/UserManager.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/UserManager.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/main.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/main.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/main.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
+build CMakeFiles/NTUTimetablingSystem.dir/src/GlobalVariables.cpp.o: CXX_COMPILER__NTUTimetablingSystem_unscanned_Debug /Users/jasmine/CLionProjects/NTUTimetablingSystem/src/GlobalVariables.cpp || cmake_object_order_depends_target_NTUTimetablingSystem
+  DEP_FILE = CMakeFiles/NTUTimetablingSystem.dir/src/GlobalVariables.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/NTUTimetablingSystem.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target NTUTimetablingSystem
@@ -63,7 +153,7 @@ build CMakeFiles/NTUTimetablingSystem.dir/main.cpp.o: CXX_COMPILER__NTUTimetabli
 #############################################
 # Link the executable NTUTimetablingSystem
 
-build NTUTimetablingSystem: CXX_EXECUTABLE_LINKER__NTUTimetablingSystem_Debug CMakeFiles/NTUTimetablingSystem.dir/main.cpp.o
+build NTUTimetablingSystem: CXX_EXECUTABLE_LINKER__NTUTimetablingSystem_Debug CMakeFiles/NTUTimetablingSystem.dir/main.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/User.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/Admin.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/Student.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/Module.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/StudentGroup.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/Lecturer.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/Room.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/SessionType.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/TimeSlot.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/TimetableEntry.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/TimetableManager.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/ConflictDetector.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/UserManager.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/main.cpp.o CMakeFiles/NTUTimetablingSystem.dir/src/GlobalVariables.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   OBJECT_DIR = CMakeFiles/NTUTimetablingSystem.dir
   POST_BUILD = :
