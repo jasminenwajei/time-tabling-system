@@ -90,3 +90,18 @@ std::vector<Student*> UserManager::getAllStudents() const {
 
     return students;
 }
+
+bool UserManager::deleteUser(const std::string& userId) {
+    auto it = std::find_if(users.begin(), users.end(),
+                           [&userId](const User* user) {
+                               return user->getUserID() == userId;
+                           });
+
+    if (it != users.end()) {
+        delete *it;
+        users.erase(it);
+        return true;
+    }
+
+    return false;
+}

@@ -41,6 +41,7 @@ public:
      */
     User* authenticate(const std::string& userId, const std::string& password) const;
 
+
     /**
      * @brief Registers a new admin user
      * @param id Admin ID
@@ -83,6 +84,8 @@ public:
      * @return Vector of pointers to student users
      */
     std::vector<Student*> getAllStudents() const;
+
+    bool deleteUser(const std::string& userId);
 };
 
 #endif // USER_MANAGER_H

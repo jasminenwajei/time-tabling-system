@@ -3,7 +3,7 @@ project(NTUTimetablingSystem)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(NTUTimetablingSystem main.cpp
+add_executable(NTUTimetablingSystem
         include/User.h
         src/User.cpp
         src/Admin.cpp

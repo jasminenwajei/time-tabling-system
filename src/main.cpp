@@ -217,8 +217,6 @@ void handleAdminOperations(Admin* admin, TimetableManager& timetableManager) {
                 handleSessionTypeManagement(admin);
                 break;
             case 4:
-                // We need to pass the userManager for student registration
-                // For simplicity, we'll just show a message here
                 std::cout << "Student Management not fully implemented in this demo." << std::endl;
                 waitForEnter();
                 break;
@@ -275,6 +273,136 @@ void handleStudentOperations(Student* student, TimetableManager& timetableManage
                 waitForEnter();
                 break;
         }
+    }
+}
+
+void handleStudentManagement(Admin* admin, UserManager& userManager) {
+    clearScreen();
+    std::cout << "Student Management" << std::endl;
+    std::cout << "-----------------" << std::endl;
+
+    // Display existing students
+    std::cout << "Existing Students:" << std::endl;
+    std::vector<Student*> students = userManager.getAllStudents();
+    if (students.empty()) {
+        std::cout << "  No students registered yet." << std::endl;
+    } else {
+        for (size_t i = 0; i < students.size(); ++i) {
+            std::cout << "  " << (i+1) << ". " << students[i]->getUserDetails() << std::endl;
+        }
+    }
+
+    std::cout << std::endl;
+    std::cout << "Operations:" << std::endl;
+    std::cout << "1. Register New Student" << std::endl;
+    std::cout << "2. Assign Student to Group" << std::endl;
+    std::cout << "3. Update Student Information" << std::endl;
+    std::cout << "4. Delete Student" << std::endl;
+    std::cout << "5. Back to Admin Menu" << std::endl;
+
+    int choice = getInputInt("Enter your choice: ", 1, 5);
+
+    switch (choice) {
+        case 1: {
+            std::string id = getInputString("Enter student ID: ");
+            std::string name = getInputString("Enter student name: ");
+            std::string password = getInputString("Enter student password: ");
+            std::string studentNumber = getInputString("Enter student number: ");
+            std::string course = getInputString("Enter student course: ");
+
+            Student* student = userManager.registerStudent(id, name, password, studentNumber, course);
+            if (student) {
+                std::cout << "Student registered successfully." << std::endl;
+            } else {
+                std::cout << "Failed to register student. ID may already exist." << std::endl;
+            }
+            waitForEnter();
+            break;
+        }
+        case 2: {
+            if (students.empty()) {
+                std::cout << "No students to assign to groups." << std::endl;
+                waitForEnter();
+                break;
+            }
+
+            if (g_studentGroups.empty()) {
+                std::cout << "No student groups available for assignment." << std::endl;
+                waitForEnter();
+                break;
+            }
+
+            int studentIndex = getInputInt("Enter student number: ", 1, students.size()) - 1;
+            Student* student = students[studentIndex];
+
+            std::cout << "Selected student: " << student->getUserDetails() << std::endl;
+            std::cout << "Available groups:" << std::endl;
+            for (size_t i = 0; i < g_studentGroups.size(); ++i) {
+                std::cout << "  " << (i+1) << ". " << g_studentGroups[i]->getDetails() << std::endl;
+            }
+
+            int groupIndex = getInputInt("Enter group number to assign student to: ", 1, g_studentGroups.size()) - 1;
+            StudentGroup* group = g_studentGroups[groupIndex];
+
+            bool success = admin->assignStudentToGroup(student->getUserID(), group->getGroupID());
+            if (success) {
+                std::cout << "Student successfully assigned to group." << std::endl;
+            } else {
+                std::cout << "Failed to assign student to group." << std::endl;
+            }
+            waitForEnter();
+            break;
+        }
+        case 3: {
+            if (students.empty()) {
+                std::cout << "No students to update." << std::endl;
+                waitForEnter();
+                break;
+            }
+
+            int studentIndex = getInputInt("Enter student number to update: ", 1, students.size()) - 1;
+            Student* student = students[studentIndex];
+
+            std::cout << "Current student details: " << student->getUserDetails() << std::endl;
+
+            std::string oldPassword = getInputString("Enter current password: ");
+            std::string newPassword = getInputString("Enter new password: ");
+
+            bool success = student->changePassword(oldPassword, newPassword);
+            if (success) {
+                std::cout << "Student password updated successfully." << std::endl;
+            } else {
+                std::cout << "Failed to update password. Current password may be incorrect." << std::endl;
+            }
+            waitForEnter();
+            break;
+        }
+        case 4: {
+            if (students.empty()) {
+                std::cout << "No students to delete." << std::endl;
+                waitForEnter();
+                break;
+            }
+
+            int studentIndex = getInputInt("Enter student number to delete: ", 1, students.size()) - 1;
+            Student* student = students[studentIndex];
+            std::string studentID = student->getUserID();
+
+            // Check if student is assigned to any groups and remove them
+            for (auto& group : g_studentGroups) {
+                if (group->hasStudent(studentID)) {
+                    group->removeStudent(studentID);
+                }
+            }
+
+            std::cout << "Student " << studentID << " would be deleted from the system." << std::endl;
+            std::cout << "Note: In a full implementation, this would remove the student from the database." << std::endl;
+            waitForEnter();
+            break;
+        }
+        case 5:
+            // Return to Admin Menu
+            break;
     }
 }
 
@@ -353,9 +481,6 @@ void handleModuleManagement(Admin* admin) {
 
             int index = getInputInt("Enter module number to delete: ", 1, g_modules.size()) - 1;
 
-            // In a real system, we would check if the module is being used in any timetable entries
-            // For simplicity, we'll just delete it here
-            Module* module = g_modules[index];
             std::string code = module->getModuleCode();
 
             g_modules.erase(g_modules.begin() + index);
@@ -484,8 +609,6 @@ void handleStudentGroupManagement(Admin* admin) {
 
             int index = getInputInt("Enter group number to delete: ", 1, g_studentGroups.size()) - 1;
 
-            // In a real system, we would check if the group is being used in any timetable entries
-            // For simplicity, we'll just delete it here
             StudentGroup* group = g_studentGroups[index];
             std::string groupID = group->getGroupID();
 
@@ -570,8 +693,6 @@ void handleSessionTypeManagement(Admin* admin) {
 
             int index = getInputInt("Enter session type number to delete: ", 1, g_sessionTypes.size()) - 1;
 
-            // In a real system, we would check if the session type is being used in any timetable entries
-            // For simplicity, we'll just delete it here
             SessionType* sessionType = g_sessionTypes[index];
             std::string typeID = sessionType->getTypeID();
 
@@ -682,8 +803,6 @@ void handleLecturerManagement(Admin* admin) {
 
             int index = getInputInt("Enter lecturer number to delete: ", 1, g_lecturers.size()) - 1;
 
-            // In a real system, we would check if the lecturer is being used in any timetable entries
-            // For simplicity, we'll just delete it here
             Lecturer* lecturer = g_lecturers[index];
             std::string lecturerID = lecturer->getLecturerID();
 
@@ -747,8 +866,6 @@ void handleRoomManagement(Admin* admin) {
 
             int index = getInputInt("Enter room number to delete: ", 1, g_rooms.size()) - 1;
 
-            // In a real system, we would check if the room is being used in any timetable entries
-            // For simplicity, we'll just delete it here
             Room* room = g_rooms[index];
             std::string roomID = room->getRoomID();
 
@@ -791,7 +908,7 @@ void handleTimetableManagement(Admin* admin, TimetableManager& timetableManager)
 
     switch (choice) {
         case 1: {
-            // Check if we have all required components
+            // Check all required components are there
             if (g_modules.empty() || g_lecturers.empty() || g_rooms.empty() ||
                 g_studentGroups.empty() || g_sessionTypes.empty()) {
                 std::cout << "Cannot create timetable entry. Missing required components:" << std::endl;
@@ -914,7 +1031,6 @@ void handleConflictDetection(Admin* admin, TimetableManager& timetableManager) {
             std::cout << "  1. " << conflicts[i].first->getEntryDetails() << std::endl;
             std::cout << "  2. " << conflicts[i].second->getEntryDetails() << std::endl;
 
-            // In a full implementation, we would use the ConflictDetector's suggestResolution method
             std::cout << "  Possible resolution: Reschedule one of the sessions to a different time or room." << std::endl;
 
             std::cout << std::endl;
@@ -942,7 +1058,7 @@ void handleViewTimetable(Student* student, TimetableManager& timetableManager) {
     int week;
     switch (choice) {
         case 1:
-            week = 1; // For demo purposes, we'll use week 1 as current
+            week = 1;
             break;
         case 2:
             week = getInputInt("Enter week number (1-53): ", 1, 53);
@@ -1069,7 +1185,7 @@ void handleExportTimetable(Student* student, TimetableManager& timetableManager)
     int week;
     switch (choice) {
         case 1:
-            week = 1; // For demo purposes, we'll use week 1 as current
+            week = 1;
             break;
         case 2:
             week = getInputInt("Enter week number (1-53): ", 1, 53);
@@ -1095,7 +1211,6 @@ void handleExportTimetable(Student* student, TimetableManager& timetableManager)
 
 // Helper functions implementation
 void clearScreen() {
-    // For simplicity, we'll just print some newlines instead of actually clearing the screen
     std::cout << std::string(50, '\n');
 }
 

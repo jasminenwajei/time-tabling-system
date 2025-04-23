@@ -1,6 +1,4 @@
-//
-// Created by jasmine nwajei on 21/04/2025.
-//
+
 #include "../include/Admin.h"
 #include "../include/Module.h"
 #include "../include/Student.h"
@@ -13,7 +11,6 @@
 #include <iostream>
 
 // Global collections for simplicity in this demonstration
-// In a real application, these would likely be managed by dedicated manager classes
 extern std::vector<Module*> g_modules;
 extern std::vector<Student*> g_students;
 extern std::vector<Lecturer*> g_lecturers;
