@@ -152,4 +152,5 @@ public:
     bool checkForConflicts(TimetableManager& timetableManager);
 };
 
+
 #endif // ADMIN_H
