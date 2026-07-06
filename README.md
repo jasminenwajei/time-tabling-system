@@ -109,7 +109,3 @@ Run:
 ./build/NTUTimetablingSystem
 ```
 
-
-Nottingham Trent University
-
-GitHub: https://github.com/jasminenwajei
